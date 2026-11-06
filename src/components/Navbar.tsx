@@ -12,6 +12,7 @@ interface NavbarProps {
 const links: { id: ViewName; label: string; icon: "grid" | "box" | "users" }[] = [
   { id: "caja", label: "Caja y recepción", icon: "grid" },
   { id: "tecnico", label: "Panel técnico", icon: "box" },
+  { id: "inventario", label: "Inventario RFID", icon: "box" },
   { id: "admin", label: "Administración", icon: "users" },
 ];
 

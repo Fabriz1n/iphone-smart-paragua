@@ -17,6 +17,30 @@ export interface Ticket {
   paid: boolean;
   paymentMethod?: PaymentMethod;
   delivered: boolean;
+  usedParts?: TicketPart[];
 }
 
-export type ViewName = "caja" | "tecnico" | "admin";
+export interface TicketPart {
+  inventoryItemId: string;
+  name: string;
+  tagCode: string;
+  quantity: number;
+  linkedAt?: string;
+}
+
+export interface InventoryItem {
+  id: string;
+  tagCode: string;
+  name: string;
+  category: string;
+  stock: number;
+  updatedAt: string;
+}
+
+export interface InventoryScanFeedback {
+  code: string;
+  message: string;
+  kind: "success" | "error";
+}
+
+export type ViewName = "caja" | "tecnico" | "admin" | "inventario";
